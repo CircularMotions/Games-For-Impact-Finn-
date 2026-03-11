@@ -10,7 +10,7 @@ public class incomeManager : MonoBehaviour
 {
     private int _coffeeIncome = 1;
     public TextMeshProUGUI BalanceText;
-    private int balance;
+    public int balance;
     private float timer = 7f;
 
     private void Update()
