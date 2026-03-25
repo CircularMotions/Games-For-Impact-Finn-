@@ -12,6 +12,17 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     public bool dragging = false;
     
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+    [SerializeField] private float returnSpeed = 15f;
+
+
+    private void Awake()
+    {
+        originalPosition = GameObject.FindGameObjectWithTag("Garment").transform.position;
+        originalRotation = GameObject.FindGameObjectWithTag("Garment").transform.rotation;
+    }
+
     private void Update()
     {
         if (isFixing && Input.GetMouseButton(0) && !dragging)
@@ -19,15 +30,15 @@ public class PlayerController : MonoBehaviour
             RayToGarment();
         }
 
-        if (objectHit != null && isHit == true && !Input.GetMouseButton(0))
+        if (objectHit != null && !Input.GetMouseButton(0))
         {
-            objectHit.transform.Translate(new Vector3(0, -height, 0), Space.World);
-            isHit = false;
+                ReturnObject();
+                isHit = false;
         }
 
         if (isHit == true)
         {
-            objectHit.transform.Rotate(Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"), 0);
+            objectHit.transform.Rotate(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }
     }
 
@@ -44,4 +55,11 @@ public class PlayerController : MonoBehaviour
         }
         Debug.DrawRay(r.origin, r.direction * 100, Color.red, 100, true);
     }
+    
+    private void ReturnObject()
+    {
+        objectHit.position = Vector3.Lerp(objectHit.position, originalPosition, Time.deltaTime * returnSpeed);
+        objectHit.rotation = Quaternion.Lerp(objectHit.rotation, originalRotation, Time.deltaTime * returnSpeed);
+    }
+
 }
