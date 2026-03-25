@@ -8,6 +8,7 @@ public class RepairCustomer : MonoBehaviour
     public GameObject pickedClothing;
     void Start()
     {
+        repairDest = GameObject.Find("RepairCustomer Dest").transform;
         gameObject.GetComponent<NavMeshAgent>().SetDestination(repairDest.position);
     }
     //Choosing a random clothing item
