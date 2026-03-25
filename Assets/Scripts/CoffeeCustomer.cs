@@ -5,13 +5,14 @@ using UnityEngine.AI;
 
 public class CoffeeCustomer : MonoBehaviour
 {
-    public GameObject Till;
+    private GameObject Till;
     private NavMeshAgent navMesh;
     public bool collected = false;
     public Animator[] animator;
     private GameObject cup;
     private void Start()
     {
+        Till = GameObject.Find("CoffeeCustomerDestination");
         cup = GameObject.Find("Cup");
         cup.SetActive(false);
         animator = GetComponentsInChildren<Animator>();
