@@ -7,7 +7,7 @@ public class CustomerSpawner : MonoBehaviour
                                                     // regular customers continue to spwan
                                                     // without spawning new repair customers
     
-    [SerializeField] private float SpawnRate = 5;
+    [SerializeField] private float SpawnRate = 10;
     private float timer = 0;
     public bool repairCustomerIsSpawned;
 
@@ -24,6 +24,16 @@ public class CustomerSpawner : MonoBehaviour
     private void Spawn()
     {
         timer = SpawnRate;
-        Instantiate(Customer[0], gameObject.transform.position, transform.rotation);
+        if (!repairCustomerIsSpawned)
+        {
+            Instantiate(Customer[Customer.Length - 1], gameObject.transform.position, transform.rotation);
+            repairCustomerIsSpawned = true;
+        }
+        else
+        {
+            Instantiate(Customer[0], gameObject.transform.position, transform.rotation); // convert to range to spawn random customers appereances.
+        }
+        
+        
     }
 }
