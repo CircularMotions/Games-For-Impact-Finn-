@@ -205,4 +205,9 @@ public class InventoryManager : MonoBehaviour
         }
         saveInventory();
     }
+
+    public void addIncome(int addAmount)
+    {
+        itemList.balance += addAmount;
+    }
 }

@@ -5,8 +5,7 @@ using UnityEngine.AI;
 
 public class CoffeePickup : MonoBehaviour
 {
-    
-    public ItemProfile ItemProfile;
+    public GameObject InventoryScript;
     public GameObject nextTarget;
     [SerializeField] private ParticleSystem particle;
     private void OnTriggerEnter(Collider other)
@@ -30,7 +29,7 @@ public class CoffeePickup : MonoBehaviour
             other.GetComponent<CoffeeCustomer>().CoffeeSpawn();
             Debug.Log(nextTarget.transform.position);
             particle.Play();
-            ItemProfile.balance++;
+            InventoryScript.GetComponent<InventoryManager>().itemList.balance++;
             coffeeIncome();
         }
         
@@ -40,7 +39,9 @@ public class CoffeePickup : MonoBehaviour
     {
         gameObject.GetComponent<AudioSource>().Play();
         // decrease number of coffee beans
+        InventoryScript.GetComponent<InventoryManager>().itemList.item4Quantity--;
         // add balance
+        InventoryScript.GetComponent<InventoryManager>().itemList.balance = InventoryScript.GetComponent<InventoryManager>().itemList.balance + 2;
         //etc.
     }
 }
