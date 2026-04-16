@@ -50,6 +50,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
             {
                 var CornerInst = Instantiate(Corner, anchor.position, anchor.rotation);
                 CornerInst.tag = "Corner";
+                // CornerInst.transform.parent = anchor;
                 Debug.Log(CornerInst);
             }
             hit.transform.gameObject.SetActive(false);
@@ -59,7 +60,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
         if (Physics.Raycast(r, out hit) && hit.transform.tag == "Corner" && gameObject.tag == "Needle")
         {
             Destroy(hit.transform.gameObject);
-            canDrag = false;
+            // canDrag = false;
         }
     }
 

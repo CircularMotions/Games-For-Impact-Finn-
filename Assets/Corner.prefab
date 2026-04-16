@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 6177147027511698680}
   - component: {fileID: 6806205073636417587}
   m_Layer: 0
-  m_Name: HoleTemp
+  m_Name: Corner
   m_TagString: Hole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,8 +121,8 @@ Transform:
   m_GameObject: {fileID: 6263218704343119722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.575e-12, y: -6.03e-13, z: -1.675e-12}
-  m_LocalScale: {x: 0.008281695, y: 0.008281695, z: 0.008281695}
+  m_LocalPosition: {x: 1.5915e-11, y: -1.12e-12, z: -3.108e-12}
+  m_LocalScale: {x: 0.015371099, y: 0.015371099, z: 0.015371099}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8727996816226502277}
@@ -164,7 +164,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 817118ba7006bff439e3aeef78b28e19, type: 2}
+  - {fileID: 2100000, guid: c96671975288d6c47b85c3bdec97f5b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

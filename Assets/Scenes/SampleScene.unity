@@ -1919,6 +1919,7 @@ GameObject:
   - component: {fileID: 287918573}
   - component: {fileID: 287918576}
   - component: {fileID: 287918577}
+  - component: {fileID: 287918578}
   m_Layer: 0
   m_Name: CoffeeCustomerDestination
   m_TagString: Untagged
@@ -1975,8 +1976,131 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190e8366b5b8b1247840e66e4095bfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  ItemProfile:
+    balance: 0
+    item1Name: 
+    item1Quantity: 0
+    item1Price: 0
+    item2Name: 
+    item2Quantity: 0
+    item2Price: 0
+    item3Name: 
+    item3Quantity: 0
+    item3Price: 0
+    item4Name: 
+    item4Quantity: 0
+    item4Price: 0
+    item5Name: 
+    item5Quantity: 0
+    item5Price: 0
+    item6Name: 
+    item6Quantity: 0
+    item6Price: 0
+    item7Name: 
+    item7Quantity: 0
+    item7Price: 0
+    item8Name: 
+    item8Quantity: 0
+    item8Price: 0
   nextTarget: {fileID: 56003812}
   particle: {fileID: 18502747}
+--- !u!82 &287918578
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287918572}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 94fd16bf4fb8b43479800e55e4ae7289, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &296674796
 GameObject:
   m_ObjectHideFlags: 0
@@ -6354,7 +6478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1ec6f3f78a3b4299d8c5dfce7ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Corner: {fileID: 6263218704343119722, guid: aa6a714617abfd94788f1836cbc8a32b, type: 3}
+  Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
   controller: {fileID: 0}
 --- !u!222 &1195214356
 CanvasRenderer:
@@ -6888,7 +7012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1ec6f3f78a3b4299d8c5dfce7ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Corner: {fileID: 6263218704343119722, guid: aa6a714617abfd94788f1836cbc8a32b, type: 3}
+  Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
   controller: {fileID: 0}
 --- !u!222 &1266321624
 CanvasRenderer:
@@ -7252,7 +7376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a1ec6f3f78a3b4299d8c5dfce7ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Corner: {fileID: 6263218704343119722, guid: aa6a714617abfd94788f1836cbc8a32b, type: 3}
+  Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
   controller: {fileID: 0}
 --- !u!222 &1286288066
 CanvasRenderer:
