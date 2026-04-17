@@ -27,7 +27,7 @@ public class Garment : MonoBehaviour
         foreach (int i in randomIndexes)
         {
             GameObject instance;
-            instance = Instantiate(holePrefab, anchors[i].position, anchors[i].rotation, anchors[i]);
+            instance = Instantiate(holePrefab, anchors[i].position, holePrefab.transform.rotation, anchors[i]);
             Holes.Add(instance);
         }
     }
