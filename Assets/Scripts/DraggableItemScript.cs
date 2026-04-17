@@ -37,7 +37,6 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnDrag(PointerEventData eventData)
     { 
-        int index = -1;
         if(canDrag)
         transform.position = Input.mousePosition;
         controller.dragging = true;
@@ -54,8 +53,9 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
             }
             foreach (var anchor in anchors)
             {
-                var CornerInst = Instantiate(Corner, anchor.position, anchor.rotation);
+                var CornerInst = Instantiate(Corner, anchor.position, anchor.rotation, GameObject.FindWithTag("Garment").transform);
                 CornerInst.tag = "Corner";
+                
                 // CornerInst.transform.parent = anchor;
                 // Debug.Log(CornerInst);
             }

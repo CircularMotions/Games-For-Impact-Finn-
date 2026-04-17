@@ -458,7 +458,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Holes: []
-  holePrefab: {fileID: 4750851755885497245, guid: 4776a54ec888ff642b3ec56e04ddcf3e, type: 3}
+  holePrefab:
+  - {fileID: 4750851755885497245, guid: 4776a54ec888ff642b3ec56e04ddcf3e, type: 3}
+  - {fileID: 4750851755885497245, guid: 67445194d30dfab48833f4c0f7c1e081, type: 3}
+  - {fileID: 4750851755885497245, guid: 10129f92fd9ac9840bbfba7c535dcd90, type: 3}
   anchors: []
 --- !u!1 &8198153994539704077
 GameObject:

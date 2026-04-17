@@ -6,7 +6,7 @@ using UnityEngine;
 public class Garment : MonoBehaviour
 {
     public List<GameObject> Holes;
-    [SerializeField] private GameObject holePrefab;
+    [SerializeField] private GameObject[] holePrefab;
     [SerializeField] private Transform[] anchors;
     void Start()
     {
@@ -27,7 +27,8 @@ public class Garment : MonoBehaviour
         foreach (int i in randomIndexes)
         {
             GameObject instance;
-            instance = Instantiate(holePrefab, anchors[i].position, holePrefab.transform.rotation, anchors[i]);
+            instance = holePrefab[Random.Range(0, holePrefab.Length - 1)];
+            Instantiate(instance, anchors[i].position, instance.transform.rotation, anchors[i]);
             Holes.Add(instance);
         }
     }
