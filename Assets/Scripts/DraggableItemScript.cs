@@ -36,9 +36,11 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     }
 
     public void OnDrag(PointerEventData eventData)
-    { 
-        if(canDrag)
-        transform.position = Input.mousePosition;
+    {
+        if (canDrag)
+        {
+            transform.position = Input.mousePosition;
+        }
         controller.dragging = true;
         RaycastHit hit;
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -51,16 +53,23 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
                 anchors.Add(child);
                 // Debug.Log(anchors);
             }
-            foreach (var anchor in anchors)
+
+            if (canDrag)
             {
-                var CornerInst = Instantiate(Corner, anchor.position, anchor.rotation, GameObject.FindWithTag("Garment").transform);
-                CornerInst.tag = "Corner";
+                foreach (var anchor in anchors)
+                {
+                    var CornerInst = Instantiate(Corner, anchor.position, anchor.rotation, GameObject.FindWithTag("Garment").transform);
+                    CornerInst.tag = "Corner";
                 
-                // CornerInst.transform.parent = anchor;
-                // Debug.Log(CornerInst);
+                    // CornerInst.transform.parent = anchor;
+                    // Debug.Log(CornerInst);
+                }
+                hit.transform.gameObject.SetActive(false); 
+                canDrag = false;
             }
             
-            canDrag = false;
+            
+            
             
             var  holes = GameObject.FindWithTag("Garment").GetComponent<Garment>().Holes;
             if (holes != null)
@@ -75,8 +84,8 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
                     }
                 }
             }
+
             
-            hit.transform.gameObject.SetActive(false);
         }
         if (Physics.Raycast(r, out hit) && hit.transform.tag == "Corner" && gameObject.tag == "Needle")
         {
