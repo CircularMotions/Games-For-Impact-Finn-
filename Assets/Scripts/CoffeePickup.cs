@@ -29,7 +29,6 @@ public class CoffeePickup : MonoBehaviour
             other.GetComponent<CoffeeCustomer>().CoffeeSpawn();
             Debug.Log(nextTarget.transform.position);
             particle.Play();
-            InventoryScript.GetComponent<InventoryManager>().itemList.balance++;
             coffeeIncome();
         }
         

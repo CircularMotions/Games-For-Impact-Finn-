@@ -1976,7 +1976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190e8366b5b8b1247840e66e4095bfd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  InventoryScript: {fileID: 0}
+  InventoryScript: {fileID: 1892397788}
   nextTarget: {fileID: 56003812}
   particle: {fileID: 18502747}
 --- !u!82 &287918578
@@ -4496,7 +4496,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 785396317}
-  - component: {fileID: 785396318}
   m_Layer: 5
   m_Name: PopupManager
   m_TagString: Untagged
@@ -4525,20 +4524,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &785396318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785396316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 133146648e5b899428202a41db2e8c7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  popupTimeTarget: 30
-  popup1: {fileID: 2044376878}
 --- !u!1 &786376790
 GameObject:
   m_ObjectHideFlags: 0
@@ -4978,6 +4963,7 @@ GameObject:
   - component: {fileID: 842378689}
   - component: {fileID: 842378688}
   - component: {fileID: 842378687}
+  - component: {fileID: 842378690}
   m_Layer: 5
   m_Name: I'mSure
   m_TagString: Untagged
@@ -5169,6 +5155,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 842378690}
+        m_TargetAssemblyTypeName: FeedbackManager, Assembly-CSharp
+        m_MethodName: GenerateFeedback
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &842378688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,6 +5205,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842378685}
   m_CullTransparentMesh: 1
+--- !u!114 &842378690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842378685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a730c285248e45042899adc6e221a5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FeedbackManager
+  SucessSpeeches: []
+  TeachFeedback: []
+  NotFinished: []
+  DisplayedText: {fileID: 699281516}
+  InventoryManager: {fileID: 1892397788}
 --- !u!1 &876286740
 GameObject:
   m_ObjectHideFlags: 0
@@ -12889,6 +12904,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 168b7ac684d5b444da26a95e956dfe06, type: 2}
+    - target: {fileID: 4164357560257349315, guid: 08474270053c6f546a1622a5a1c500fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7152101286959851485, guid: 08474270053c6f546a1622a5a1c500fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.17
