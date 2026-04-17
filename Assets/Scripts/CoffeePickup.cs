@@ -39,8 +39,12 @@ public class CoffeePickup : MonoBehaviour
         gameObject.GetComponent<AudioSource>().Play();
         // decrease number of coffee beans
         InventoryScript.GetComponent<InventoryManager>().itemList.item4Quantity--;
+        InventoryScript.GetComponent<InventoryManager>().itemList.item5Quantity--;
+        InventoryScript.GetComponent<InventoryManager>().itemList.item6Quantity--;
+        InventoryScript.GetComponent<InventoryManager>().itemList.item7Quantity--;
+        InventoryScript.GetComponent<InventoryManager>().itemList.item8Quantity--;
         // add balance
-        InventoryScript.GetComponent<InventoryManager>().itemList.balance = InventoryScript.GetComponent<InventoryManager>().itemList.balance + 2;
+        InventoryScript.GetComponent<InventoryManager>().itemList.balance = InventoryScript.GetComponent<InventoryManager>().itemList.balance + 5;
         //etc.
     }
 }
