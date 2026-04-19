@@ -19,10 +19,6 @@ public class CoffeePickup : MonoBehaviour
                 StartCoroutine(nextLocation(other.gameObject));
                 // Debug.Log("Executed");
             }
-            other.GetComponent<NavMeshAgent>().isStopped = true;
-            // Debug.Log("Triggered");
-            StartCoroutine(nextLocation(other.gameObject));
-            // Debug.Log("Executed");
         }
     }
 

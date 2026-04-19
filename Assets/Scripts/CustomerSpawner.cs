@@ -11,17 +11,19 @@ public class CustomerSpawner : MonoBehaviour
     public bool repairCustomerIsSpawned;
     [SerializeField] private incomeManager incomeManager;
     public GameObject InventoryManager;
+    public GameObject notEnoughMaterials;
 
+    private void Start()
+    {
+        notEnoughMaterials.SetActive(false);
+    }
     private void Update()
     {
         timer -= Time.deltaTime;
 
         if (timer <= 0)
         {
-            if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
-            {
-                Spawn();
-            }
+            Spawn();
         }
     }
 
@@ -30,12 +32,20 @@ public class CustomerSpawner : MonoBehaviour
         timer = SpawnRate;
         if (incomeManager.finished)
         {
-            Instantiate(RepairCustomers[Random.Range(0, RepairCustomers.Length-1)], gameObject.transform.position, transform.rotation);
+            Instantiate(RepairCustomers[Random.Range(0, RepairCustomers.Length - 1)], gameObject.transform.position, transform.rotation);
             incomeManager.finished = false;
         }
         else
         {
-            Instantiate(CoffeeCustomers[Random.Range(0, CoffeeCustomers.Length - 1)], gameObject.transform.position, transform.rotation); // convert to range to spawn random customers appereances.
+            if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
+            {
+                Instantiate(CoffeeCustomers[Random.Range(0, CoffeeCustomers.Length - 1)], gameObject.transform.position, transform.rotation); // convert to range to spawn random customers appereances.
+                notEnoughMaterials.SetActive(false);
+            }
+            else
+            {
+                notEnoughMaterials.SetActive(true);
+            }
         }
         
         
