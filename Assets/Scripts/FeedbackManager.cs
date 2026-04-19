@@ -10,7 +10,7 @@ public class FeedbackManager : MonoBehaviour
     [SerializeField] private string[] TeachFeedback;
     [SerializeField] private string[] NotFinished;
     public TextMeshProUGUI DisplayedText;
-    [SerializeField] private GameObject InventoryManager;
+    [SerializeField] private InventoryManager InventoryManager;
     [SerializeField] private incomeManager incomeManager;
 
     public void GenerateFeedback()
@@ -20,6 +20,7 @@ public class FeedbackManager : MonoBehaviour
             Destroy(GameObject.FindWithTag("Garment"));
             Destroy(GameObject.FindWithTag("RepairCustomer"));
             incomeManager.finished = true;
+            InventoryManager.itemList.balance += Random.Range(10, 25); //temp
         }
         bool isFixed = true;
         bool needsFeedback = false;
