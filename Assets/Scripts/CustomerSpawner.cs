@@ -10,6 +10,7 @@ public class CustomerSpawner : MonoBehaviour
     private float timer = 0;
     public bool repairCustomerIsSpawned;
     [SerializeField] private incomeManager incomeManager;
+    public GameObject InventoryManager;
 
     private void Update()
     {
@@ -17,7 +18,10 @@ public class CustomerSpawner : MonoBehaviour
 
         if (timer <= 0)
         {
-            Spawn();
+            if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
+            {
+                Spawn();
+            }
         }
     }
 

@@ -303,7 +303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &44202448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &107136629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7469,6 +7469,7 @@ MonoBehaviour:
   SpawnRate: 7.5
   repairCustomerIsSpawned: 0
   incomeManager: {fileID: 242792710}
+  InventoryManager: {fileID: 1892397788}
 --- !u!1 &1190641578
 GameObject:
   m_ObjectHideFlags: 0
@@ -11516,7 +11517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1492a6e6ca412644ba8306a1146b7fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  startingBalance: 10
+  startingBalance: 20
   item1StartName: Threads
   item1StartQuantity: 0
   item1StartPrice: 1
@@ -11528,19 +11529,19 @@ MonoBehaviour:
   item3StartPrice: 2
   item4StartName: Coffee Beans
   item4StartQuantity: 0
-  item4StartPrice: 4
+  item4StartPrice: 2
   item5StartName: Lids
   item5StartQuantity: 0
-  item5StartPrice: 2
+  item5StartPrice: 1
   item6StartName: Biodegradeable Cups
   item6StartQuantity: 0
-  item6StartPrice: 4
+  item6StartPrice: 2
   item7StartName: Sugar
   item7StartQuantity: 0
-  item7StartPrice: 3
+  item7StartPrice: 1
   item8StartName: Stirring Rods
   item8StartQuantity: 0
-  item8StartPrice: 2
+  item8StartPrice: 1
   item1ShopText: {fileID: 570754918}
   item2ShopText: {fileID: 135749563}
   item3ShopText: {fileID: 1279544950}

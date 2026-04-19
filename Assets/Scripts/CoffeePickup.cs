@@ -12,6 +12,13 @@ public class CoffeePickup : MonoBehaviour
     {
         if (other.CompareTag("Customer"))
         {
+            if (InventoryScript.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryScript.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryScript.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryScript.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryScript.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
+            {
+                other.GetComponent<NavMeshAgent>().isStopped = true;
+                // Debug.Log("Triggered");
+                StartCoroutine(nextLocation(other.gameObject));
+                // Debug.Log("Executed");
+            }
             other.GetComponent<NavMeshAgent>().isStopped = true;
             // Debug.Log("Triggered");
             StartCoroutine(nextLocation(other.gameObject));
