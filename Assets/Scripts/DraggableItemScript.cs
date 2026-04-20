@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -13,7 +14,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     private bool canDrag;
     public GameObject Corner;
     [SerializeField] private PlayerController controller;
-    private Garment garment;
+    [SerializeField] private Garment garment;
 
     private void Start()
     {
@@ -64,8 +65,12 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
                     // CornerInst.transform.parent = anchor;
                     // Debug.Log(CornerInst);
                 }
-                hit.transform.gameObject.SetActive(false); 
+
+                garment = GameObject.FindWithTag("Garment").GetComponent<Garment>();
+                Instantiate(garment.Patches[Random.Range(0, garment.Patches.Length)], hit.transform.position,
+                    hit.transform.rotation, garment.transform);
                 canDrag = false;
+                hit.transform.gameObject.SetActive(false);
             }
             
             
