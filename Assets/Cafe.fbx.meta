@@ -9,6 +9,51 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Chair
     second: {fileID: 2100000, guid: 144dc5089e7bdb448b18e1661150d1c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ClothesLine
+    second: {fileID: 2100000, guid: 18ac0694ead0b2d4282fee1cade3cb55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 2f1328c51a6331b47803f5e993b35d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hanger
+    second: {fileID: 2100000, guid: 80d44e785a1934640b3e76d501089c2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lamp
+    second: {fileID: 2100000, guid: 9de6beb7b0d4bf64eb90391b6f4c042b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LampBase
+    second: {fileID: 2100000, guid: 99f6cce8cc94a93439f29af5f44a867d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 8a7a6871b9f312344ba1c275a3adb91f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porcelain
+    second: {fileID: 2100000, guid: 442d3b6d5fb113c499740d843e5c122e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Table
+    second: {fileID: 2100000, guid: bb002b5b3804cb4469a8f2dd1fda2f76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: e90cb07924f29d64c952efe510a28daf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
