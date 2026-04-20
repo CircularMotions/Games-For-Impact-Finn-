@@ -6,6 +6,7 @@ using UnityEngine;
 public class Garment : MonoBehaviour
 {
     public List<GameObject> Holes;
+    public GameObject[] Patches;
     [SerializeField] private GameObject[] holePrefab;
     [SerializeField] private Transform[] anchors;
     void Start()

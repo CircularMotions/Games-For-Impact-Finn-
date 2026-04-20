@@ -406,7 +406,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75756, y: 0.75756, z: 0.75756}
+  m_LocalScale: {x: 0.7575603, y: 0.75756, z: 0.7575603}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1444188970490454853}
@@ -458,6 +458,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Holes: []
+  Patches:
+  - {fileID: 8890197982997865555, guid: e61b4a51571807e4fb94bae5c1dd486e, type: 3}
+  - {fileID: 4085441083269260456, guid: 30c50a26d9a0fff4880adc83a622c849, type: 3}
+  - {fileID: 4746367461763959100, guid: 2cf08f3b25126e043a79f61d820cdec5, type: 3}
   holePrefab:
   - {fileID: 4750851755885497245, guid: 4776a54ec888ff642b3ec56e04ddcf3e, type: 3}
   - {fileID: 4750851755885497245, guid: 67445194d30dfab48833f4c0f7c1e081, type: 3}
