@@ -15,9 +15,22 @@ MonoBehaviour:
   garments:
   - {fileID: 7113645883123401142, guid: f1cfaac56b6b1f2429a1e76bd92642b6, type: 3}
   customerText:
-  - Hello go fix this
-  - Hello go fix this 1
-  - Hello go fix this 2
+  - This used to belong to my father. It should still technically fit fine but, uh,
+    well... you can see he did quite a number on it while he was still with us.
+  - "This was passed onto me from my grandmama, and they would be so pretty if anyone
+    else bothered to wash them, or care for them, or even remember them for that
+    matter. Oh well, people nowadays don\u2019t respect clothes like they used to."
+  - Here. With my old frame, it just don't stay on me right anymore, and they're
+    also a bit beat up... okay, maybe more than a bit. But what can I say, these
+    saw a lot of action in my heyday, and I want them to have a second chance.
+  - Hey. I got this from my dad. I admit I kinda want to appreciate it. Problem is
+    it looks like it went through a cement mixer filled with glass and obsidian pieces.
+    I heard you actually know how to fix stuff, so I came by to see what's your deal.
+    Anyways, here you go.
+  - "Sup. You guy who fixes clothes and stuff? Check this out, found it in a charity
+    shop and thought it would look good if I could get it into tip-top shape\u2026
+    but, uhm, let\u2019s just say I, uhh, forgot that I\u2019m not that handy with
+    needle thread, y\u2019know? Anyways thankyousomuchand byeee!"
   feedback:
   - 'Feedback
 
