@@ -13,13 +13,13 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     private GameObject camera;
     private bool canDrag;
     public GameObject Corner;
-    [SerializeField] private PlayerController controller;
+    // [SerializeField] private PlayerController controller;
     [SerializeField] private Garment garment;
 
     private void Start()
     {
         camera = GameObject.Find("WorkshopCam");
-        controller = camera.GetComponent<PlayerController>();
+        // controller = camera.GetComponent<PlayerController>();
         
     }
 
@@ -30,7 +30,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
-        controller.dragging = true;
+        // controller.dragging = true;
         canDrag = true;
         
         
@@ -42,7 +42,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
         {
             transform.position = Input.mousePosition;
         }
-        controller.dragging = true;
+        // controller.dragging = true;
         RaycastHit hit;
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(r, out hit) && hit.transform.tag == "Hole" && gameObject.tag == "Patch")
@@ -106,7 +106,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        controller.dragging = false;
+        // controller.dragging = false;
         transform.position = startTransform;
         canDrag = true;
     }

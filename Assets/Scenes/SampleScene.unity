@@ -354,7 +354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -62.50006}
+  m_AnchoredPosition: {x: 0, y: -62.5}
   m_SizeDelta: {x: 1200, y: -425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44202449
@@ -3497,6 +3497,7 @@ GameObject:
   - component: {fileID: 336993769}
   - component: {fileID: 336993768}
   - component: {fileID: 336993772}
+  - component: {fileID: 336993773}
   m_Layer: 0
   m_Name: WorkshopCam
   m_TagString: MainCamera
@@ -3629,7 +3630,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 336993767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04ba6a216e5882d4aa752601f6346c90, type: 3}
   m_Name: 
@@ -3639,8 +3640,25 @@ MonoBehaviour:
   isHit: 0
   rotationSpeed: 1
   dragging: 0
+  originalPosition: {x: 0, y: 0, z: 0}
+  originalRotation: {x: 0, y: 0, z: 0, w: 0}
   returnSpeed: 5
   originalPos: {fileID: 678908107}
+--- !u!114 &336993773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336993767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3d6610e97de0e4da57e53b2f4f6a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  ZoomSpeed: 2
+  minFOV: 20
+  maxFOV: 60
 --- !u!1001 &356207608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4062,11 +4080,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 330585546}
+  - {fileID: 336993771}
   - {fileID: 1187773317}
   - {fileID: 1291176466}
   - {fileID: 1721940865}
-  - {fileID: 330585546}
-  - {fileID: 336993771}
   - {fileID: 410087041}
   - {fileID: 242792713}
   - {fileID: 832575519}
@@ -6095,7 +6113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -62.50006}
+  m_AnchoredPosition: {x: 0, y: -62.5}
   m_SizeDelta: {x: 1200, y: -425.00012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784184215
@@ -10813,7 +10831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
-  controller: {fileID: 0}
   garment: {fileID: 0}
 --- !u!222 &1195214356
 CanvasRenderer:
@@ -11650,7 +11667,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
-  controller: {fileID: 0}
   garment: {fileID: 0}
 --- !u!222 &1266321624
 CanvasRenderer:
@@ -12015,7 +12031,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
-  controller: {fileID: 0}
   garment: {fileID: 0}
 --- !u!222 &1286288066
 CanvasRenderer:
