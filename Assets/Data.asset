@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameData
   garments:
   - {fileID: 8963812699976818737, guid: 07052d8c51a262e46a6c10753ce681b7, type: 3}
+  - {fileID: 1731851736637168978, guid: 350d50d2a7fd7f648bbab1122ab825e4, type: 3}
+  - {fileID: 1963163522494162418, guid: b2a05ea646586f141a3dd403ca8e3a1f, type: 3}
+  - {fileID: 1963163522494162418, guid: 8270f3f745d42264e9a20079b824447e, type: 3}
+  - {fileID: 7113645883123401142, guid: f1cfaac56b6b1f2429a1e76bd92642b6, type: 3}
   customerText:
   - This used to belong to my father. It should still technically fit fine but, uh,
     well... you can see he did quite a number on it while he was still with us.

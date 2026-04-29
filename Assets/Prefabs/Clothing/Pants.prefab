@@ -124,6 +124,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.0671313
       objectReference: {fileID: 0}
+    - target: {fileID: -5894863403822994359, guid: 3fabfe6b74b94864891d4a3a24d6040b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -5894863403822994359, guid: 3fabfe6b74b94864891d4a3a24d6040b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.576
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610832936595009893, guid: 3fabfe6b74b94864891d4a3a24d6040b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610832936595009893, guid: 3fabfe6b74b94864891d4a3a24d6040b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00018508977
+      objectReference: {fileID: 0}
+    - target: {fileID: -5610832936595009893, guid: 3fabfe6b74b94864891d4a3a24d6040b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0953057
+      objectReference: {fileID: 0}
     - target: {fileID: -3434231611833108316, guid: 3fabfe6b74b94864891d4a3a24d6040b, type: 3}
       propertyPath: m_TagString
       value: Anchor
@@ -354,4 +374,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.91772664, y: 0.1, z: 1.4246683}
-  m_Center: {x: 0, y: 0, z: 0.5592332}
+  m_Center: {x: 0, y: 0, z: 0.1}
