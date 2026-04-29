@@ -15,6 +15,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject InventoryManager;
     public GameObject notEnoughMaterials;
     public GameObject redDot;
+    public GameObject redCafeDot;
     private bool onCafe = true;
     public bool redText = false;
 
@@ -22,6 +23,7 @@ public class CustomerSpawner : MonoBehaviour
     {
         notEnoughMaterials.SetActive(true);
         redDot.SetActive(true);
+        redCafeDot.SetActive(true);
     }
     private void Update()
     {
@@ -36,6 +38,7 @@ public class CustomerSpawner : MonoBehaviour
             notEnoughMaterials.SetActive(false);
             redDot.SetActive(false);
             redText = false;
+            redCafeDot.SetActive(false);
         }
         else
         {
@@ -45,6 +48,7 @@ public class CustomerSpawner : MonoBehaviour
                 redDot.SetActive(true);
             }
             redText = true;
+            redCafeDot.SetActive(true);
         }
     }
 
