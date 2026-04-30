@@ -8692,7 +8692,7 @@ GameObject:
   - component: {fileID: 950419277}
   - component: {fileID: 950419276}
   m_Layer: 5
-  m_Name: Image
+  m_Name: RedCafeDot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
