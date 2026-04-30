@@ -102,7 +102,7 @@ public class InventoryManager : MonoBehaviour
     }
     private void Update()
     {
-        BalanceText.text = $"Balance: {itemList.balance}";
+        BalanceText.text = itemList.balance.ToString();
 
         item1OwnedText.text = $"{itemList.item1Name}: ({itemList.item1Quantity / 1})";
         item2OwnedText.text = $"{itemList.item2Name}: ({itemList.item2Quantity})";

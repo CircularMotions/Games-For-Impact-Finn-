@@ -20,7 +20,8 @@ public class CustomerSpawner : MonoBehaviour
 
     private void Start()
     {
-        notEnoughMaterials.SetActive(true);
+        notEnoughMaterials.SetActive(false);
+        redDot.SetActive(false);
     }
     private void Update()
     {
