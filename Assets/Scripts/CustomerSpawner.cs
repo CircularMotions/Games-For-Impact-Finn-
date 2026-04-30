@@ -15,12 +15,15 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject InventoryManager;
     public GameObject notEnoughMaterials;
     public GameObject redDot;
+    public GameObject redCafeDot;
     private bool onCafe = true;
     public bool redText = false;
 
     private void Start()
     {
         notEnoughMaterials.SetActive(true);
+        redDot.SetActive(true);
+        redCafeDot.SetActive(true);
     }
     private void Update()
     {
@@ -29,6 +32,23 @@ public class CustomerSpawner : MonoBehaviour
         if (timer <= 0)
         {
             Spawn();
+        }
+        if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
+        {
+            notEnoughMaterials.SetActive(false);
+            redDot.SetActive(false);
+            redText = false;
+            redCafeDot.SetActive(false);
+        }
+        else
+        {
+            if (onCafe)
+            {
+                notEnoughMaterials.SetActive(true);
+                redDot.SetActive(true);
+            }
+            redText = true;
+            redCafeDot.SetActive(true);
         }
     }
 
@@ -45,22 +65,8 @@ public class CustomerSpawner : MonoBehaviour
             if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
             {
                 Instantiate(CoffeeCustomers[Random.Range(0, CoffeeCustomers.Length - 1)], gameObject.transform.position, transform.rotation); // convert to range to spawn random customers appereances.
-                notEnoughMaterials.SetActive(false);
-                redDot.SetActive(false);
-                redText = false;
             }
-            else
-            {
-                if (onCafe)
-                {
-                    notEnoughMaterials.SetActive(true);
-                    redDot.SetActive(true);
-                }
-                redText = true;
-            }
-        }
-        
-        
+        }    
     }
 
     public void OnCafe()
