@@ -11,6 +11,7 @@ TagManager:
   - Anchor
   - Patch
   - Needle
+  - Corner
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Environment
   - Water
   - UI
-  - 
+  - Customer
   - 
   - 
   - 
